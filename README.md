@@ -3,7 +3,7 @@
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your/repository.git
+   git clone https://github.com/vadimsolhovojs/google-sheets-data-uploader.git
    ```
 
 2. Navigate to the project directory:
@@ -17,7 +17,6 @@
    ```bash
    npm install
    ```
-<br>
 <br>
 <br>
 
@@ -80,7 +79,9 @@ const data = [
 ]
 module.exports = data
 ```
-<br>
+## Acknowledgments
+- This application utilizes the [googleapis](https://www.npmjs.com/package/googleapis) package provided by Google.
+
 <br>
 <br>
 
