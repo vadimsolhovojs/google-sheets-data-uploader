@@ -71,14 +71,7 @@ app.post("/", async (req, res) => {
         }
 
         // Transform raw data into the format suitable for Google Sheets
-        const transformedTestData = rawData.map(item => [
-            item.Name, 
-            item.LastName, 
-            item.Age, 
-            item.UserID, 
-            item.Comment || ''
-        ])
-
+        const transformedTestData = rawData.map(item => Object.values(item))
         // Clear existing data in the spreadsheet
         await clear(sheets)
         // Append new data to the spreadsheet

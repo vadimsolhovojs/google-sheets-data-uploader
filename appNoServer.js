@@ -59,14 +59,7 @@ async function uploadData(){
         }
 
         // Transform default data into the format suitable for Google Sheets
-        const transformedTestData = DEFAULT_DATA.map(item => [
-            item.Name, 
-            item.LastName, 
-            item.Age, 
-            item.UserID, 
-            item.Comment || ''
-        ])
-
+        const transformedTestData = DEFAULT_DATA.map(item => Object.values(item))
         // Clear existing data in the spreadsheet
         await clear(sheets)
         // Append default data to the spreadsheet
